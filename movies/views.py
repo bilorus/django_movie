@@ -8,7 +8,7 @@ class MoviesView(ListView):
     '''Вывод списка фильмов'''
     model = Movie
     queryset = Movie.objects.filter(draft=False)
-    # template_name = 'movies/movies.html'
+    # template_name = 'movies/movies_list.html'
 
 
 class MovieDetailView(DetailView):

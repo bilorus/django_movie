@@ -330,40 +330,40 @@
                 <div class="left-ads-display col-lg-8">
                     <div class="row">
                         <div class="desc1-left col-md-6">
-                            <img src="{{ movie_detail.poster.url }}" class="img-fluid" alt="">
+                            <img src="{{ movie.poster.url }}" class="img-fluid" alt="">
                         </div>
                         <div class="desc1-right col-md-6 pl-lg-4">
                             <h3 class="editContent" style="outline: none; cursor: inherit;">
-                                {{ movie_detail.title }}</h3>
+                                {{ movie.title }}</h3>
                             <ul>
-                                <li style="list-style: none"><span><b>Год:</b> {{ movie_detail.year }}</span></li>
-                                <li style="list-style: none"><span><b>Страна:</b> {{ movie_detail.country }}</span>
+                                <li style="list-style: none"><span><b>Год:</b> {{movie.year }}</span></li>
+                                <li style="list-style: none"><span><b>Страна:</b> {{movie.country }}</span>
                                 </li>
-                                <li style="list-style: none"><span><b>Слоган:</b> {{ movie_detail.tagline }}</span>
+                                <li style="list-style: none"><span><b>Слоган:</b> {{movie.tagline }}</span>
                                 </li>
                                 <li style="list-style: none">
                                     <span><b>Режиссер:</b>
-                                        {% for person in movie_detail.directors.all %}
+                                        {% for person in movie.directors.all %}
                                             {{ person.name }}
                                         {% endfor %}
                                     </span></li>
                                 <li style="list-style: none"><span><b>Актеры:</b>
-                                        {% for person in movie_detail.actors.all %}
+                                        {% for person in movie.actors.all %}
                                             {{ person.name }}
                                         {% endfor %}
                                 </span></li>
                                 <li style="list-style: none"><span><b>Жанр:</b>
-                                        {% for genre in movie_detail.genres.all %}
+                                        {% for genre in movie.genres.all %}
                                             {{ genre.name }}
                                         {% endfor %}</span>
                                 </li>
-                                <li style="list-style: none"><span><b>Премьера в мире:</b> {{ movie_detail.premier }}</span>
+                                <li style="list-style: none"><span><b>Премьера в мире:</b> {{movie.premier }}</span>
                                 </li>
                                 <li style="list-style: none">
-                                    <span><b>Бюджет:</b> ${{ movie_detail.budget }}</span></li>
+                                    <span><b>Бюджет:</b> ${{movie.budget }}</span></li>
                                 <li style="list-style: none">
-                                    <span><b>Сборы в США:</b> ${{ movie_detail.fees_in_usa }}</span></li>
-                                <li style="list-style: none"><span><b>Сборы в мире:</b> ${{ movie_detail.fees_in_world }}</span>
+                                    <span><b>Сборы в США:</b> ${{movie.fees_in_usa }}</span></li>
+                                <li style="list-style: none"><span><b>Сборы в мире:</b> ${{movie.fees_in_world }}</span>
                                 </li>
                                 <li style="list-style: none">
                                     <a href="#"><b>Рейтинг:</b>
@@ -417,13 +417,13 @@
                     <div class="row sub-para-w3layouts mt-5">
 
                         <h3 class="shop-sing editContent" style="outline: none; cursor: inherit;">
-                            О фильме : {{ movie_detail.title }}</h3>
+                            О фильме : {{movie.title }}</h3>
                         <p>
                             <img src="bundles/images/about.jpg" class="img-fluid" alt="">
                             <img src="bundles/images/admin.jpg" class="img-fluid" alt="">
                             <img src="bundles/images/d1.jpg" class="img-fluid" alt="">
                         </p>
-                        <p class="editContent" style="outline: none; cursor: inherit;">{{ movie_detail.description }}</p>
+                        <p class="editContent" style="outline: none; cursor: inherit;">{{movie.description }}</p>
                         <p class="mt-3 italic-blue editContent"
                            style="outline: none; cursor: inherit;">
                             <iframe width="560" height="315"
